@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		953BF98C1FDAB81F000DE3DE /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953BF98B1FDAB81F000DE3DE /* LoginButton.swift */; };
 		95CFADDD1FD71594009D25A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CFADDC1FD71594009D25A2 /* AppDelegate.swift */; };
 		95CFADE21FD71594009D25A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95CFADE01FD71594009D25A2 /* Main.storyboard */; };
 		95CFADE41FD71594009D25A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95CFADE31FD71594009D25A2 /* Assets.xcassets */; };
@@ -14,9 +15,11 @@
 		95CFADEF1FD72215009D25A2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CFADEE1FD72215009D25A2 /* LoginViewController.swift */; };
 		95CFADF11FD752C3009D25A2 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CFADF01FD752C3009D25A2 /* Constant.swift */; };
 		95CFADF41FD7573F009D25A2 /* ColorExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CFADF31FD7573F009D25A2 /* ColorExtention.swift */; };
+		95CFADF91FD878F8009D25A2 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CFADF81FD878F8009D25A2 /* LoginTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		953BF98B1FDAB81F000DE3DE /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		95CFADD91FD71594009D25A2 /* Login_4K-Soft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Login_4K-Soft.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95CFADDC1FD71594009D25A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95CFADE11FD71594009D25A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		95CFADEE1FD72215009D25A2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		95CFADF01FD752C3009D25A2 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		95CFADF31FD7573F009D25A2 /* ColorExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtention.swift; sourceTree = "<group>"; };
+		95CFADF81FD878F8009D25A2 /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		953BF98A1FDAB7C9000DE3DE /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				953BF98D1FDABA67000DE3DE /* View */,
+				95CFADEE1FD72215009D25A2 /* LoginViewController.swift */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		953BF98D1FDABA67000DE3DE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				953BF98B1FDAB81F000DE3DE /* LoginButton.swift */,
+				95CFADF81FD878F8009D25A2 /* LoginTextField.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		95CFADD01FD71594009D25A2 = {
 			isa = PBXGroup;
 			children = (
@@ -59,7 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				95CFADDC1FD71594009D25A2 /* AppDelegate.swift */,
-				95CFADEE1FD72215009D25A2 /* LoginViewController.swift */,
+				953BF98A1FDAB7C9000DE3DE /* LoginViewController */,
 				95CFADF51FD75754009D25A2 /* Extention */,
 				95CFADF21FD75715009D25A2 /* Utilites */,
 				95CFADE01FD71594009D25A2 /* Main.storyboard */,
@@ -159,7 +181,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				95CFADF41FD7573F009D25A2 /* ColorExtention.swift in Sources */,
+				953BF98C1FDAB81F000DE3DE /* LoginButton.swift in Sources */,
 				95CFADEF1FD72215009D25A2 /* LoginViewController.swift in Sources */,
+				95CFADF91FD878F8009D25A2 /* LoginTextField.swift in Sources */,
 				95CFADDD1FD71594009D25A2 /* AppDelegate.swift in Sources */,
 				95CFADF11FD752C3009D25A2 /* Constant.swift in Sources */,
 			);

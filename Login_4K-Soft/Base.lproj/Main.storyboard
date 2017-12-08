@@ -41,25 +41,31 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wn7-LM-PBz">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wn7-LM-PBz" customClass="LoginTextField" customModule="Login_4K_Soft" customModuleProvider="target">
                                 <rect key="frame" x="16" y="260" width="343" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="XaM-j0-gtd"/>
                                 </constraints>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.065899103879928589" green="0.065985687077045441" blue="0.065912492573261261" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="SFt-zv-1VC"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mgd-Fa-grf">
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mgd-Fa-grf" customClass="LoginTextField" customModule="Login_4K_Soft" customModuleProvider="target">
                                 <rect key="frame" x="16" y="318" width="343" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="TQB-wd-VHq"/>
                                 </constraints>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.065899103879928589" green="0.065985687077045441" blue="0.065912492573261261" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="y5q-yH-jDp"/>
+                                </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yer-WD-ahG">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yer-WD-ahG" customClass="LoginButton" customModule="Login_4K_Soft" customModuleProvider="target">
                                 <rect key="frame" x="16" y="384" width="343" height="50"/>
                                 <color key="backgroundColor" red="0.61435699462890625" green="0.70562654733657837" blue="0.95920127630233765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -72,14 +78,18 @@
                                     <color key="titleColor" red="0.80712777376174927" green="0.85326105356216431" blue="0.98239487409591675" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCl-FC-XT4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="cCl-FC-XT4">
                                 <rect key="frame" x="112" y="467" width="150" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="1Wc-9K-cHV"/>
                                     <constraint firstAttribute="width" constant="150" id="B20-0R-oTt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="13"/>
-                                <state key="normal" title="Забыли пароль?"/>
+                                <state key="normal">
+                                    <string key="title">Забыли
+пароль?</string>
+                                    <color key="titleColor" red="0.43983209133148193" green="0.44018650054931641" blue="0.43988698720932007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
