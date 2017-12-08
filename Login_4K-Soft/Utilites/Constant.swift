@@ -9,6 +9,10 @@
 import Foundation
 
 struct Constant {
+    struct String {
+        static let email = "E-mail"
+        static let password = "Пароль"
+    }
     
     struct Color {
         static let redError = "FC4D42"

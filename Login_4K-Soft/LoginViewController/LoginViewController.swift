@@ -31,9 +31,14 @@ class LoginViewController: UIViewController {
         imgLogo.layer.shadowOffset = CGSize(width: 0, height: 0)
         
         emailTextField.becomeFirstResponder()
-        emailTextField.placeholder = "E-mail"
-        passwordTextField.placeholder = "Пароль"
+        emailTextField.placeholder = Constant.String.email
+        passwordTextField.placeholder = Constant.String.password
         
+    }
+    //MARK: - Action
+    @IBAction func forgotPassword(_ sender: UIButton) {
+        let vc = ForgotPasswordViewController.storyboardInstance()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }
