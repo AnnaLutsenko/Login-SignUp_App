@@ -11,26 +11,25 @@ import UIKit
 class LoginViewController: UIViewController {
     @IBOutlet weak var imgLogo: UIImageView!
     
+    @IBOutlet weak var lblEnter: UILabel!
     @IBOutlet weak var emailTextField: EmailTextField!
     @IBOutlet weak var passwordTextField: PasswordTextField!
     @IBOutlet weak var enterBtn: UIButton!
     
     let requestManager = RequestManager()
     let validationManager = ValidationManager()
+    let color = Constant.Color.self
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         initViewController()
-        
     }
     
     func initViewController() {
-        let borderColor = UIColor.init(hex: Constant.Color.grayNotActiveTF).cgColor
-       
         imgLogo.layer.cornerRadius = 20
         imgLogo.layer.borderWidth = 1
-        imgLogo.layer.borderColor = borderColor
+        imgLogo.layer.borderColor = UIColor.init(hex: color.grayNotActiveTF).cgColor
         imgLogo.layer.shadowOffset = CGSize(width: 0, height: 0)
         
         enterBtn.isEnabled = false
@@ -52,17 +51,29 @@ class LoginViewController: UIViewController {
         
         if isValidEmailAndPassword() {
             requestManager.signIn(email: email, password: password, success: {
+                DispatchQueue.main.async {
+                    self.emailTextField.style = .default
+                }
                 
                 
             }, failure: { (error) in
                 print(error.localizedDescription)
+                DispatchQueue.main.async {
+                    self.lblEnter.text = Constant.String.Error.wrongPassword
+                    self.lblEnter.textColor = UIColor.init(hex:  self.color.redError)
+                    self.passwordTextField.style = .error
+                }
+                
             })
         }
         
         
     }
     
-    @IBAction func valueCanged(_ sender: UITextField) {
+    @IBAction func valueCanged(_ sender: LoginTextField) {
+        self.lblEnter.text = Constant.String.enter
+        self.lblEnter.textColor = UIColor.init(hex:  color.grayText)
+        sender.style = .active
         enterBtn.isEnabled = isValidEmailAndPassword()
     }
     

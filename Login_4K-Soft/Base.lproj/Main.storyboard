@@ -32,10 +32,9 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вход" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGp-Sf-FGd">
-                                <rect key="frame" x="137" y="254" width="100" height="21"/>
+                                <rect key="frame" x="16" y="254" width="343" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="O4X-bG-uaI"/>
-                                    <constraint firstAttribute="width" constant="100" id="p5V-OL-He8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                 <nil key="textColor"/>
@@ -84,7 +83,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="cCl-FC-XT4">
-                                <rect key="frame" x="112" y="511" width="150" height="50"/>
+                                <rect key="frame" x="112.5" y="511" width="150" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="1Wc-9K-cHV"/>
                                     <constraint firstAttribute="width" constant="150" id="B20-0R-oTt"/>
@@ -104,9 +103,9 @@
                         <constraints>
                             <constraint firstItem="cCl-FC-XT4" firstAttribute="top" secondItem="Yer-WD-ahG" secondAttribute="bottom" constant="33" id="3YI-ZA-yxo"/>
                             <constraint firstItem="mgd-Fa-grf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="3yJ-Z7-t8p"/>
-                            <constraint firstItem="DGp-Sf-FGd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DMc-1Z-LoE"/>
                             <constraint firstItem="wn7-LM-PBz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="EoR-EH-mop"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yer-WD-ahG" secondAttribute="trailing" constant="16" id="Mx8-Ng-L24"/>
+                            <constraint firstItem="DGp-Sf-FGd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-16" id="QL0-Lg-xPR"/>
                             <constraint firstItem="cCl-FC-XT4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TYV-m6-pyV"/>
                             <constraint firstItem="DGp-Sf-FGd" firstAttribute="top" secondItem="t6K-VC-nfA" secondAttribute="bottom" constant="56" id="Td8-fX-6Wk"/>
                             <constraint firstItem="Yer-WD-ahG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="TuJ-fo-VSv"/>
@@ -114,6 +113,7 @@
                             <constraint firstItem="t6K-VC-nfA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Xux-NG-egg"/>
                             <constraint firstItem="Yer-WD-ahG" firstAttribute="top" secondItem="mgd-Fa-grf" secondAttribute="bottom" constant="16" id="ch0-4E-j5L"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mgd-Fa-grf" secondAttribute="trailing" constant="16" id="dq4-Kb-Ny3"/>
+                            <constraint firstItem="DGp-Sf-FGd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="tZ0-sR-bYh"/>
                             <constraint firstItem="wn7-LM-PBz" firstAttribute="top" secondItem="DGp-Sf-FGd" secondAttribute="bottom" constant="29" id="ttB-yB-8IF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wn7-LM-PBz" secondAttribute="trailing" constant="16" id="u5P-nO-PX6"/>
                             <constraint firstItem="t6K-VC-nfA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="34" id="vBm-vl-QSC"/>
@@ -125,12 +125,13 @@
                         <outlet property="emailTextField" destination="wn7-LM-PBz" id="2Up-vK-Dds"/>
                         <outlet property="enterBtn" destination="Yer-WD-ahG" id="p25-6g-vHY"/>
                         <outlet property="imgLogo" destination="t6K-VC-nfA" id="Ppe-He-Xrj"/>
+                        <outlet property="lblEnter" destination="DGp-Sf-FGd" id="Rrk-ur-aDl"/>
                         <outlet property="passwordTextField" destination="mgd-Fa-grf" id="Ysd-KK-vb6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="110" y="134"/>
+            <point key="canvasLocation" x="109.59999999999999" y="133.5832083958021"/>
         </scene>
         <!--Forgot Password View Controller-->
         <scene sceneID="uVH-VK-Jck">
@@ -232,6 +233,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="huq-qK-FLn" id="ok6-Ix-cDg"/>
                         <outlet property="imgBar" destination="3c4-6s-D5H" id="ud2-LH-Owx"/>
+                        <outlet property="lblInfo" destination="xev-O7-04H" id="SO7-Q9-58a"/>
                         <outlet property="sendPasswordBtn" destination="H9G-Mr-gYx" id="YkI-zf-bzp"/>
                     </connections>
                 </viewController>

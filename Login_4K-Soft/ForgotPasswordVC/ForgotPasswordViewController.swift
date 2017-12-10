@@ -11,6 +11,7 @@ import UIKit
 class ForgotPasswordViewController: UIViewController {
     
     @IBOutlet weak var imgBar: UIImageView!
+    @IBOutlet weak var lblInfo: UILabel!
     @IBOutlet weak var emailTextField: EmailTextField!
     @IBOutlet weak var sendPasswordBtn: LoginButton!
     
@@ -46,7 +47,10 @@ class ForgotPasswordViewController: UIViewController {
     
     
     @IBAction func sendPassword(_ sender: UIButton) {
-        
+        guard let email = emailTextField.text else { return }
+        emailTextField.isHidden = true
+        imgBar.image = UIImage.init(named: "done")
+        lblInfo.text = Constant.String.thankWeAlreadySend + email
     }
     
 }
