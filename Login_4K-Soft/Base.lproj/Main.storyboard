@@ -41,7 +41,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wn7-LM-PBz" customClass="LoginTextField" customModule="Login_4K_Soft" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wn7-LM-PBz" customClass="EmailTextField" customModule="Login_4K_Soft" customModuleProvider="target">
                                 <rect key="frame" x="16" y="304" width="343" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="XaM-j0-gtd"/>
@@ -50,10 +50,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                                 <connections>
+                                    <action selector="valueCanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="NdV-QQ-KTr"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="SFt-zv-1VC"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mgd-Fa-grf" customClass="LoginTextField" customModule="Login_4K_Soft" customModuleProvider="target">
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mgd-Fa-grf" customClass="PasswordTextField" customModule="Login_4K_Soft" customModuleProvider="target">
                                 <rect key="frame" x="16" y="362" width="343" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="TQB-wd-VHq"/>
@@ -62,6 +63,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                 <connections>
+                                    <action selector="valueCanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="SHE-xg-ut2"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="y5q-yH-jDp"/>
                                 </connections>
                             </textField>
@@ -77,6 +79,9 @@
                                 <state key="disabled" title="Войти">
                                     <color key="titleColor" red="0.80712777376174927" green="0.85326105356216431" blue="0.98239487409591675" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oaC-QM-6va"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="cCl-FC-XT4">
                                 <rect key="frame" x="112" y="511" width="150" height="50"/>
@@ -125,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="476" y="133.5832083958021"/>
+            <point key="canvasLocation" x="110" y="134"/>
         </scene>
         <!--Forgot Password View Controller-->
         <scene sceneID="uVH-VK-Jck">
@@ -165,7 +170,7 @@
                                     <constraint firstAttribute="height" constant="84" id="xk8-52-zKi"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="huq-qK-FLn" customClass="LoginTextField" customModule="Login_4K_Soft" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="huq-qK-FLn" customClass="EmailTextField" customModule="Login_4K_Soft" customModuleProvider="target">
                                 <rect key="frame" x="16" y="318" width="343" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8vF-qk-cku"/>
@@ -174,6 +179,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done"/>
                                 <connections>
+                                    <action selector="editChanged:" destination="Uf8-A1-3Mg" eventType="editingChanged" id="zLt-cX-btV"/>
                                     <outlet property="delegate" destination="Uf8-A1-3Mg" id="bbj-it-bxP"/>
                                 </connections>
                             </textField>
@@ -226,11 +232,12 @@
                     <connections>
                         <outlet property="emailTextField" destination="huq-qK-FLn" id="ok6-Ix-cDg"/>
                         <outlet property="imgBar" destination="3c4-6s-D5H" id="ud2-LH-Owx"/>
+                        <outlet property="sendPasswordBtn" destination="H9G-Mr-gYx" id="YkI-zf-bzp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RWy-Aq-Hiv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1440.8" y="133.5832083958021"/>
+            <point key="canvasLocation" x="937" y="134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="76j-MY-qw4">
@@ -248,7 +255,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VPz-Ej-aEc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-375" y="134"/>
+            <point key="canvasLocation" x="-612" y="134"/>
         </scene>
     </scenes>
     <resources>
