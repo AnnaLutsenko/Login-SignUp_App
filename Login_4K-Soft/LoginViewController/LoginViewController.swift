@@ -40,6 +40,12 @@ class LoginViewController: UIViewController {
         passwordTextField.text = "admin-user-2"
         enterBtn.isEnabled = isValidEmailAndPassword()
     }
+    
+    func openMenuVC() {
+        let vc = ContainerViewController.storyboardInstance()
+        self.navigationController?.viewControllers = [vc]
+    }
+    
     //MARK: - Action
     @IBAction func forgotPassword(_ sender: UIButton) {
         let vc = ForgotPasswordViewController.storyboardInstance()
@@ -55,6 +61,7 @@ class LoginViewController: UIViewController {
             requestManager.signIn(email: email, password: password, success: { user in
                 DispatchQueue.main.async {
                     self.emailTextField.style = .default
+                    self.openMenuVC()
                 }
                 
             }, failure: { (error) in
@@ -67,8 +74,6 @@ class LoginViewController: UIViewController {
                 
             })
         }
-        
-        
     }
     
     @IBAction func valueCanged(_ sender: LoginTextField) {

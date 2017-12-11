@@ -14,6 +14,7 @@
 		953BF9971FDD5624000DE3DE /* ValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953BF9961FDD5624000DE3DE /* ValidationManager.swift */; };
 		953BF9991FDD72EB000DE3DE /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953BF9981FDD72EB000DE3DE /* EmailTextField.swift */; };
 		953BF99B1FDD747D000DE3DE /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953BF99A1FDD747D000DE3DE /* PasswordTextField.swift */; };
+		953BF9AB1FDF2AA2000DE3DE /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953BF9AA1FDF2AA2000DE3DE /* ContainerViewController.swift */; };
 		95CFADDD1FD71594009D25A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CFADDC1FD71594009D25A2 /* AppDelegate.swift */; };
 		95CFADE21FD71594009D25A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95CFADE01FD71594009D25A2 /* Main.storyboard */; };
 		95CFADE41FD71594009D25A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95CFADE31FD71594009D25A2 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		953BF9961FDD5624000DE3DE /* ValidationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationManager.swift; sourceTree = "<group>"; };
 		953BF9981FDD72EB000DE3DE /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
 		953BF99A1FDD747D000DE3DE /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
+		953BF9AA1FDF2AA2000DE3DE /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		95CFADD91FD71594009D25A2 /* Login_4K-Soft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Login_4K-Soft.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95CFADDC1FD71594009D25A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95CFADE11FD71594009D25A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				95CFADDC1FD71594009D25A2 /* AppDelegate.swift */,
+				953BF9AA1FDF2AA2000DE3DE /* ContainerViewController.swift */,
 				953BF98A1FDAB7C9000DE3DE /* LoginViewController */,
 				953BF9901FDAEB07000DE3DE /* ForgotPasswordVC */,
 				95CFADF51FD75754009D25A2 /* Extention */,
@@ -304,6 +307,7 @@
 				953BF98F1FDAC324000DE3DE /* ForgotPasswordViewController.swift in Sources */,
 				953BF98C1FDAB81F000DE3DE /* LoginButton.swift in Sources */,
 				953BF9921FDD4CD5000DE3DE /* RequestManager.swift in Sources */,
+				953BF9AB1FDF2AA2000DE3DE /* ContainerViewController.swift in Sources */,
 				95CFADEF1FD72215009D25A2 /* LoginViewController.swift in Sources */,
 				953BF9951FDD5239000DE3DE /* User.swift in Sources */,
 				95CFADF91FD878F8009D25A2 /* LoginTextField.swift in Sources */,
