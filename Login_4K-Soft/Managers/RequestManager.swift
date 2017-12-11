@@ -24,7 +24,7 @@ class RequestManager {
         
         let urlParams = ["email": email, "password": password] as [String : String]
     
-        Alamofire.request(URLConstants.signInURL, method: .get, parameters: urlParams)
+        Alamofire.request(URLConstants.signInURL, method: .post, parameters: urlParams)
             .validate(statusCode: 200..<300)
             .responseJSON { response in
                 switch response.result {

@@ -32,11 +32,13 @@ class LoginViewController: UIViewController {
         imgLogo.layer.borderColor = UIColor.init(hex: color.grayNotActiveTF).cgColor
         imgLogo.layer.shadowOffset = CGSize(width: 0, height: 0)
         
-        enterBtn.isEnabled = false
-        
         emailTextField.becomeFirstResponder()
         emailTextField.placeholder = Constant.String.email
         passwordTextField.placeholder = Constant.String.password
+        
+        emailTextField.text = "admin-user-2@exmpl.cm"
+        passwordTextField.text = "admin-user-2"
+        enterBtn.isEnabled = isValidEmailAndPassword()
     }
     //MARK: - Action
     @IBAction func forgotPassword(_ sender: UIButton) {
