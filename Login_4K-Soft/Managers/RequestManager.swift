@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import Unbox
 
 struct URLConstants {
     static let signInURL = "http://api.crmsport.ru/users/sign_in"
@@ -17,7 +18,7 @@ enum RequestError : Error {
 }
 
 class RequestManager {
-    typealias Success = () -> Void
+    typealias Success = (User) -> Void
     typealias Failure = (Error) -> Void
     
     func signIn(email: String, password: String, success: @escaping Success, failure: @escaping Failure) {
@@ -29,8 +30,16 @@ class RequestManager {
             .responseJSON { response in
                 switch response.result {
                 case .success(let json):
-                    
-                    print(json)
+                    guard let unboxableDictionary = json as? UnboxableDictionary else {
+                        failure(RequestError.unknownError)
+                        return
+                    }
+                    do {
+                        let user: User = try unbox(dictionary: unboxableDictionary)
+                        success(user)
+                    } catch let error {
+                        failure(error)
+                    }
                     
                 case .failure(let error):
                     failure(error)

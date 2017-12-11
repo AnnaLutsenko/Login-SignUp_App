@@ -52,11 +52,10 @@ class LoginViewController: UIViewController {
             let password = passwordTextField.text else { return }
         
         if isValidEmailAndPassword() {
-            requestManager.signIn(email: email, password: password, success: {
+            requestManager.signIn(email: email, password: password, success: { user in
                 DispatchQueue.main.async {
                     self.emailTextField.style = .default
                 }
-                
                 
             }, failure: { (error) in
                 print(error.localizedDescription)

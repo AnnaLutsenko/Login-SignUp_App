@@ -7,6 +7,7 @@ target 'Login_4K-Soft' do
 
   # Pods for Login_4K-Soft
   pod 'Alamofire'
+  pod 'Unbox'
   pod 'SVProgressHUD'
 
 end
