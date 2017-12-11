@@ -10,25 +10,48 @@ import UIKit
 
 class LoginTextField: UITextField {
     
+    let color = Constant.Color.self
+    
+    enum Style {
+        case `default`
+        case error
+        case active
+    }
+    
+    var style: Style = .default {
+        didSet {
+            switch style {
+            case .default:
+                applyStyleWithHEXColor(text: color.grayText, border: color.grayNotActiveTF)
+            case .error:
+                applyStyleWithHEXColor(text: color.redError, border: color.redError)
+            case .active:
+                applyStyleWithHEXColor(text: color.grayText, border: color.grayActiveBorderTF)
+            }
+        }
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        let borderColor = UIColor.init(hex: Constant.Color.grayNotActiveTF).cgColor
         let placeholderColor = UIColor.init(hex: Constant.Color.grayTxtPlaceholder)
-        
+        applyStyleWithHEXColor(text: color.grayText, border: color.grayNotActiveTF)
         self.layer.borderWidth = 1
         self.layer.cornerRadius = 8
-        self.layer.borderColor = borderColor
-        self.attributedPlaceholder = NSAttributedString(string: "", attributes: [NSAttributedStringKey.foregroundColor: placeholderColor])
         self.layer.sublayerTransform =  CATransform3DMakeTranslation(16, 0, 0)
-
+        self.attributedPlaceholder = NSAttributedString(string: "", attributes: [NSAttributedStringKey.foregroundColor: placeholderColor])
     }
-
-    override func becomeFirstResponder() -> Bool {
-        self.layer.borderColor = UIColor.init(hex: Constant.Color.grayActiveBorderTF).cgColor
+    
+    @discardableResult override func becomeFirstResponder() -> Bool {
+        self.style = .active
         return super.becomeFirstResponder()
     }
-    override func resignFirstResponder() -> Bool {
-        self.layer.borderColor = UIColor.init(hex: Constant.Color.grayNotActiveTF).cgColor
+    @discardableResult override func resignFirstResponder() -> Bool {
+        self.style = .default
         return super.resignFirstResponder()
+    }
+    
+    private func applyStyleWithHEXColor(text: String, border: String) {
+        self.textColor = UIColor.init(hex: text)
+        self.layer.borderColor = UIColor.init(hex: border).cgColor
     }
 }

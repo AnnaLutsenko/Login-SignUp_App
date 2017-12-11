@@ -11,7 +11,11 @@ import UIKit
 class ForgotPasswordViewController: UIViewController {
     
     @IBOutlet weak var imgBar: UIImageView!
-    @IBOutlet weak var emailTextField: LoginTextField!
+    @IBOutlet weak var lblInfo: UILabel!
+    @IBOutlet weak var emailTextField: EmailTextField!
+    @IBOutlet weak var sendPasswordBtn: LoginButton!
+    
+    var email = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +30,9 @@ class ForgotPasswordViewController: UIViewController {
     
     func initViewController() {
         emailTextField.becomeFirstResponder()
+        emailTextField.text = email
         emailTextField.placeholder = Constant.String.email
+        sendPasswordBtn.isEnabled = emailTextField.isValidData()
     }
     
     //MARK: - Action
@@ -35,8 +41,16 @@ class ForgotPasswordViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func editChanged(_ sender: EmailTextField) {
+        sendPasswordBtn.isEnabled = emailTextField.isValidData()
+    }
+    
+    
     @IBAction func sendPassword(_ sender: UIButton) {
-        
+        guard let email = emailTextField.text else { return }
+        emailTextField.isHidden = true
+        imgBar.image = UIImage.init(named: "done")
+        lblInfo.text = Constant.String.thankWeAlreadySend + email
     }
     
 }
