@@ -26,10 +26,15 @@ struct Constant {
         static let redError = "FC4D42"
         static let blueBtn = "9DB5F0"
         static let blueLightBtn = "CED9FB"
+        static let purple = "9DB5F0"
         static let grayActiveBorderTF = "A9A9A9"
         static let grayNotActiveTF = "F1F1F1"
         static let grayTextInfo = "888888"
         static let grayText = "111111"
         static let grayTxtPlaceholder = "707070"
+    }
+    
+    struct CellIdentifier {
+        static let menu = "reuseMenuIdentifier"
     }
 }

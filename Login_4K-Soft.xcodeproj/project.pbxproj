@@ -15,6 +15,8 @@
 		953BF9991FDD72EB000DE3DE /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953BF9981FDD72EB000DE3DE /* EmailTextField.swift */; };
 		953BF99B1FDD747D000DE3DE /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953BF99A1FDD747D000DE3DE /* PasswordTextField.swift */; };
 		953BF9AB1FDF2AA2000DE3DE /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953BF9AA1FDF2AA2000DE3DE /* ContainerViewController.swift */; };
+		9542A8731FE079DE00DC28CE /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9542A8721FE079DE00DC28CE /* MenuTableViewCell.swift */; };
+		9542A8751FE07B0E00DC28CE /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9542A8741FE07B0E00DC28CE /* MenuViewController.swift */; };
 		95CFADDD1FD71594009D25A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CFADDC1FD71594009D25A2 /* AppDelegate.swift */; };
 		95CFADE21FD71594009D25A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95CFADE01FD71594009D25A2 /* Main.storyboard */; };
 		95CFADE41FD71594009D25A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95CFADE31FD71594009D25A2 /* Assets.xcassets */; };
@@ -35,6 +37,8 @@
 		953BF9981FDD72EB000DE3DE /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
 		953BF99A1FDD747D000DE3DE /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		953BF9AA1FDF2AA2000DE3DE /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		9542A8721FE079DE00DC28CE /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		9542A8741FE07B0E00DC28CE /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		95CFADD91FD71594009D25A2 /* Login_4K-Soft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Login_4K-Soft.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95CFADDC1FD71594009D25A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95CFADE11FD71594009D25A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -132,6 +136,26 @@
 			path = ContainerViewController;
 			sourceTree = "<group>";
 		};
+		9542A8711FE0798A00DC28CE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				953BF9AC1FDF39CE000DE3DE /* ContainerViewController */,
+				9542A8761FE07B1C00DC28CE /* MenuTableView */,
+				953BF98A1FDAB7C9000DE3DE /* LoginViewController */,
+				953BF9901FDAEB07000DE3DE /* ForgotPasswordVC */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9542A8761FE07B1C00DC28CE /* MenuTableView */ = {
+			isa = PBXGroup;
+			children = (
+				9542A8721FE079DE00DC28CE /* MenuTableViewCell.swift */,
+				9542A8741FE07B0E00DC28CE /* MenuViewController.swift */,
+			);
+			path = MenuTableView;
+			sourceTree = "<group>";
+		};
 		95CFADD01FD71594009D25A2 = {
 			isa = PBXGroup;
 			children = (
@@ -154,9 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				95CFADDC1FD71594009D25A2 /* AppDelegate.swift */,
-				953BF9AC1FDF39CE000DE3DE /* ContainerViewController */,
-				953BF98A1FDAB7C9000DE3DE /* LoginViewController */,
-				953BF9901FDAEB07000DE3DE /* ForgotPasswordVC */,
+				9542A8711FE0798A00DC28CE /* Controllers */,
 				95CFADF51FD75754009D25A2 /* Extention */,
 				953BF99C1FDD796D000DE3DE /* Models */,
 				953BF9931FDD5183000DE3DE /* Managers */,
@@ -310,6 +332,8 @@
 			files = (
 				953BF9971FDD5624000DE3DE /* ValidationManager.swift in Sources */,
 				95CFADF41FD7573F009D25A2 /* ColorExtention.swift in Sources */,
+				9542A8751FE07B0E00DC28CE /* MenuViewController.swift in Sources */,
+				9542A8731FE079DE00DC28CE /* MenuTableViewCell.swift in Sources */,
 				953BF99B1FDD747D000DE3DE /* PasswordTextField.swift in Sources */,
 				953BF9991FDD72EB000DE3DE /* EmailTextField.swift in Sources */,
 				953BF98F1FDAC324000DE3DE /* ForgotPasswordViewController.swift in Sources */,
