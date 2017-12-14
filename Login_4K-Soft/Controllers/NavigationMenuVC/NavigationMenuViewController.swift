@@ -12,6 +12,9 @@ class NavigationMenuViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    let navigationTitles = ["Константин", "Рабочие группы", "Календарь", "Сообщения", "Уведомления", "Настройки", "Поддержка"]
+    let imgNames = ["account", "work group", "calendar", "message", "notification", "settings", "support"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,12 +32,15 @@ extension NavigationMenuViewController: UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        return navigationTitles.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constant.CellIdentifier.navMenu, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constant.CellIdentifier.navMenu, for: indexPath) as! NavMenuTableViewCell
+        
+        cell.iconImg.image = UIImage.init(named: imgNames[indexPath.row])
+        cell.titleLbl.text = navigationTitles[indexPath.row]
         
         return cell
     }
