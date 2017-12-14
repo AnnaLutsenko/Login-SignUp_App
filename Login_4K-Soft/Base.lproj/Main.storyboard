@@ -319,20 +319,80 @@
             </objects>
             <point key="canvasLocation" x="1692" y="-90"/>
         </scene>
-        <!--View Controller-->
+        <!--Navigation Menu View Controller-->
         <scene sceneID="aig-Ln-BUX">
             <objects>
-                <viewController id="aRA-8l-N3v" sceneMemberID="viewController">
+                <viewController id="aRA-8l-N3v" customClass="NavigationMenuViewController" customModule="Login_4K_Soft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wBC-X2-Izm">
                         <rect key="frame" x="0.0" y="0.0" width="250" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.85541671514511108" green="0.85606878995895386" blue="0.8555176854133606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o8H-hx-H63">
+                                <rect key="frame" x="0.0" y="0.0" width="250" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.97254901960784312" green="0.97261565923690796" blue="0.97242289781570435" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reuseNavMenuIdentifier" id="bQN-8V-AnF" customClass="NavMenuTableViewCell" customModule="Login_4K_Soft" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="250" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bQN-8V-AnF" id="DhZ-9N-98R">
+                                            <rect key="frame" x="0.0" y="0.0" width="250" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aq4-v1-NJC">
+                                                    <rect key="frame" x="15" y="8" width="27" height="27"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="aq4-v1-NJC" secondAttribute="height" multiplier="1:1" id="Cjp-t8-TiV"/>
+                                                        <constraint firstAttribute="width" constant="27" id="haV-pg-zYT"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTM-Vd-4kb">
+                                                    <rect key="frame" x="50" y="12" width="185" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="Jq6-Cv-0C1"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.28624382615089417" green="0.28629669547080994" blue="0.28623262047767639" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="RTM-Vd-4kb" firstAttribute="centerY" secondItem="DhZ-9N-98R" secondAttribute="centerY" id="OCD-rf-Z2T"/>
+                                                <constraint firstItem="aq4-v1-NJC" firstAttribute="leading" secondItem="DhZ-9N-98R" secondAttribute="leading" constant="15" id="SvM-mY-dE3"/>
+                                                <constraint firstAttribute="trailing" secondItem="RTM-Vd-4kb" secondAttribute="trailing" constant="15" id="UmR-LK-8LN"/>
+                                                <constraint firstItem="RTM-Vd-4kb" firstAttribute="leading" secondItem="aq4-v1-NJC" secondAttribute="trailing" constant="8" id="bxz-m1-Xcf"/>
+                                                <constraint firstItem="aq4-v1-NJC" firstAttribute="centerY" secondItem="DhZ-9N-98R" secondAttribute="centerY" id="dXc-PQ-BnG"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.97245663404464722" green="0.97261565923690796" blue="0.97242289781570435" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="iconImg" destination="aq4-v1-NJC" id="xDH-RB-3xP"/>
+                                            <outlet property="titleLbl" destination="RTM-Vd-4kb" id="xiR-DH-3Hn"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="aRA-8l-N3v" id="XgV-rh-JRg"/>
+                                    <outlet property="delegate" destination="aRA-8l-N3v" id="yF6-to-ho8"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97245663404464722" green="0.97261565923690796" blue="0.97242289781570435" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="o8H-hx-H63" firstAttribute="top" secondItem="wBC-X2-Izm" secondAttribute="top" id="K9R-G6-5uC"/>
+                            <constraint firstItem="o8H-hx-H63" firstAttribute="leading" secondItem="XdJ-WX-v5z" secondAttribute="leading" id="Nsz-ag-zOH"/>
+                            <constraint firstItem="o8H-hx-H63" firstAttribute="bottom" secondItem="XdJ-WX-v5z" secondAttribute="bottom" id="rDt-6t-NLp"/>
+                            <constraint firstItem="o8H-hx-H63" firstAttribute="trailing" secondItem="XdJ-WX-v5z" secondAttribute="trailing" id="x1A-mA-VCX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="XdJ-WX-v5z"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="o8H-hx-H63" id="M0f-OW-jIx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aAa-xd-zBZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3408" y="-439"/>
+            <point key="canvasLocation" x="3408" y="-439.43028485757122"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="LKd-v4-bni">

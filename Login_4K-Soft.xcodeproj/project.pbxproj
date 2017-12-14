@@ -18,6 +18,8 @@
 		9542A8731FE079DE00DC28CE /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9542A8721FE079DE00DC28CE /* MenuTableViewCell.swift */; };
 		9542A8751FE07B0E00DC28CE /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9542A8741FE07B0E00DC28CE /* MenuViewController.swift */; };
 		9556EADC1FE31B93001D3198 /* LogoImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9556EADB1FE31B93001D3198 /* LogoImageView.swift */; };
+		9556EADE1FE31F27001D3198 /* NavigationMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9556EADD1FE31F27001D3198 /* NavigationMenuViewController.swift */; };
+		9556EAE11FE320FA001D3198 /* NavMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9556EAE01FE320FA001D3198 /* NavMenuTableViewCell.swift */; };
 		95CFADDD1FD71594009D25A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CFADDC1FD71594009D25A2 /* AppDelegate.swift */; };
 		95CFADE21FD71594009D25A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95CFADE01FD71594009D25A2 /* Main.storyboard */; };
 		95CFADE41FD71594009D25A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95CFADE31FD71594009D25A2 /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 		9542A8721FE079DE00DC28CE /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		9542A8741FE07B0E00DC28CE /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		9556EADB1FE31B93001D3198 /* LogoImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoImageView.swift; sourceTree = "<group>"; };
+		9556EADD1FE31F27001D3198 /* NavigationMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationMenuViewController.swift; sourceTree = "<group>"; };
+		9556EAE01FE320FA001D3198 /* NavMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavMenuTableViewCell.swift; sourceTree = "<group>"; };
 		95CFADD91FD71594009D25A2 /* Login_4K-Soft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Login_4K-Soft.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95CFADDC1FD71594009D25A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95CFADE11FD71594009D25A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -144,6 +148,7 @@
 			children = (
 				953BF9AC1FDF39CE000DE3DE /* ContainerViewController */,
 				9542A8761FE07B1C00DC28CE /* MenuTableView */,
+				9556EADF1FE31F39001D3198 /* NavigationMenuVC */,
 				953BF98A1FDAB7C9000DE3DE /* LoginViewController */,
 				953BF9901FDAEB07000DE3DE /* ForgotPasswordVC */,
 			);
@@ -157,6 +162,15 @@
 				9542A8741FE07B0E00DC28CE /* MenuViewController.swift */,
 			);
 			path = MenuTableView;
+			sourceTree = "<group>";
+		};
+		9556EADF1FE31F39001D3198 /* NavigationMenuVC */ = {
+			isa = PBXGroup;
+			children = (
+				9556EAE01FE320FA001D3198 /* NavMenuTableViewCell.swift */,
+				9556EADD1FE31F27001D3198 /* NavigationMenuViewController.swift */,
+			);
+			path = NavigationMenuVC;
 			sourceTree = "<group>";
 		};
 		95CFADD01FD71594009D25A2 = {
@@ -337,10 +351,12 @@
 				95CFADF41FD7573F009D25A2 /* ColorExtention.swift in Sources */,
 				9542A8751FE07B0E00DC28CE /* MenuViewController.swift in Sources */,
 				9542A8731FE079DE00DC28CE /* MenuTableViewCell.swift in Sources */,
+				9556EAE11FE320FA001D3198 /* NavMenuTableViewCell.swift in Sources */,
 				953BF99B1FDD747D000DE3DE /* PasswordTextField.swift in Sources */,
 				953BF9991FDD72EB000DE3DE /* EmailTextField.swift in Sources */,
 				953BF98F1FDAC324000DE3DE /* ForgotPasswordViewController.swift in Sources */,
 				953BF98C1FDAB81F000DE3DE /* LoginButton.swift in Sources */,
+				9556EADE1FE31F27001D3198 /* NavigationMenuViewController.swift in Sources */,
 				953BF9921FDD4CD5000DE3DE /* RequestManager.swift in Sources */,
 				953BF9AB1FDF2AA2000DE3DE /* ContainerViewController.swift in Sources */,
 				95CFADEF1FD72215009D25A2 /* LoginViewController.swift in Sources */,

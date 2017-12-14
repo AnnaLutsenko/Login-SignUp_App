@@ -36,5 +36,6 @@ struct Constant {
     
     struct CellIdentifier {
         static let menu = "reuseMenuIdentifier"
+        static let navMenu = "reuseNavMenuIdentifier"
     }
 }
