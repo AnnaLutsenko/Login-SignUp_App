@@ -25,7 +25,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="t6K-VC-nfA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_icon" translatesAutoresizingMaskIntoConstraints="NO" id="t6K-VC-nfA" customClass="LogoImageView" customModule="Login_4K_Soft" customModuleProvider="target">
                                 <rect key="frame" x="137.5" y="98" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="7F6-rD-F2o"/>
@@ -84,15 +84,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="cCl-FC-XT4">
-                                <rect key="frame" x="112.5" y="511" width="150" height="50"/>
+                                <rect key="frame" x="87" y="511" width="200" height="24"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="1Wc-9K-cHV"/>
-                                    <constraint firstAttribute="width" constant="150" id="B20-0R-oTt"/>
+                                    <constraint firstAttribute="height" constant="24" id="1Wc-9K-cHV"/>
+                                    <constraint firstAttribute="width" constant="200" id="B20-0R-oTt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="13"/>
-                                <state key="normal">
-                                    <string key="title">Забыли
-пароль?</string>
+                                <state key="normal" title="Забыли пароль?">
                                     <color key="titleColor" red="0.43983209133148193" green="0.44018650054931641" blue="0.43988698720932007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -509,8 +507,8 @@
         <image name="Bar" width="88" height="88"/>
         <image name="More" width="21" height="5"/>
         <image name="Team Request" width="16" height="16"/>
+        <image name="app_icon" width="1023" height="1023"/>
         <image name="background" width="343" height="186"/>
         <image name="copy" width="18" height="14"/>
-        <image name="logo" width="66" height="36"/>
     </resources>
 </document>

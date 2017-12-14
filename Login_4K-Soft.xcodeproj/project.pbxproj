@@ -17,6 +17,7 @@
 		953BF9AB1FDF2AA2000DE3DE /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953BF9AA1FDF2AA2000DE3DE /* ContainerViewController.swift */; };
 		9542A8731FE079DE00DC28CE /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9542A8721FE079DE00DC28CE /* MenuTableViewCell.swift */; };
 		9542A8751FE07B0E00DC28CE /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9542A8741FE07B0E00DC28CE /* MenuViewController.swift */; };
+		9556EADC1FE31B93001D3198 /* LogoImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9556EADB1FE31B93001D3198 /* LogoImageView.swift */; };
 		95CFADDD1FD71594009D25A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CFADDC1FD71594009D25A2 /* AppDelegate.swift */; };
 		95CFADE21FD71594009D25A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95CFADE01FD71594009D25A2 /* Main.storyboard */; };
 		95CFADE41FD71594009D25A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95CFADE31FD71594009D25A2 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		953BF9AA1FDF2AA2000DE3DE /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		9542A8721FE079DE00DC28CE /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		9542A8741FE07B0E00DC28CE /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		9556EADB1FE31B93001D3198 /* LogoImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoImageView.swift; sourceTree = "<group>"; };
 		95CFADD91FD71594009D25A2 /* Login_4K-Soft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Login_4K-Soft.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95CFADDC1FD71594009D25A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95CFADE11FD71594009D25A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			children = (
 				953BF98B1FDAB81F000DE3DE /* LoginButton.swift */,
 				95CFADF81FD878F8009D25A2 /* LoginTextField.swift */,
+				9556EADB1FE31B93001D3198 /* LogoImageView.swift */,
 				953BF9981FDD72EB000DE3DE /* EmailTextField.swift */,
 				953BF99A1FDD747D000DE3DE /* PasswordTextField.swift */,
 			);
@@ -343,6 +346,7 @@
 				95CFADEF1FD72215009D25A2 /* LoginViewController.swift in Sources */,
 				953BF9951FDD5239000DE3DE /* User.swift in Sources */,
 				95CFADF91FD878F8009D25A2 /* LoginTextField.swift in Sources */,
+				9556EADC1FE31B93001D3198 /* LogoImageView.swift in Sources */,
 				95CFADDD1FD71594009D25A2 /* AppDelegate.swift in Sources */,
 				95CFADF11FD752C3009D25A2 /* Constant.swift in Sources */,
 			);

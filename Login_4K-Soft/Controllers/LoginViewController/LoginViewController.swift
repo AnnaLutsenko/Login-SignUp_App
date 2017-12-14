@@ -9,7 +9,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    @IBOutlet weak var imgLogo: UIImageView!
+    @IBOutlet weak var imgLogo: LogoImageView!
     
     @IBOutlet weak var lblEnter: UILabel!
     @IBOutlet weak var emailTextField: EmailTextField!
@@ -27,11 +27,6 @@ class LoginViewController: UIViewController {
     }
     
     func initViewController() {
-        imgLogo.layer.cornerRadius = 20
-        imgLogo.layer.borderWidth = 1
-        imgLogo.layer.borderColor = UIColor.init(hex: color.grayNotActiveTF).cgColor
-        imgLogo.layer.shadowOffset = CGSize(width: 0, height: 0)
-        
         emailTextField.becomeFirstResponder()
         emailTextField.placeholder = Constant.String.email
         passwordTextField.placeholder = Constant.String.password
