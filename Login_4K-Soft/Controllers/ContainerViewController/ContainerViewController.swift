@@ -11,6 +11,7 @@ import UIKit
 class ContainerViewController: UIViewController {
     
     @IBOutlet weak var leadingMenuConstraint: NSLayoutConstraint!
+    @IBOutlet weak var trailingMenuConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,10 +34,13 @@ class ContainerViewController: UIViewController {
     }
     
     @objc func menuBtnTapped() {
+        let widthScreen = self.view.frame.size.width
         if leadingMenuConstraint.constant == 0 {
-            leadingMenuConstraint.constant = self.view.frame.size.width / 1.5
+            leadingMenuConstraint.constant = widthScreen / 1.7
+            trailingMenuConstraint.constant =  widthScreen / 1.7
         } else {
             leadingMenuConstraint.constant = 0
+            trailingMenuConstraint.constant = 0
         }
         UIView.animate(withDuration: 0.5) {
             self.view.layoutIfNeeded()

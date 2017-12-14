@@ -248,7 +248,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9hz-ob-jrb">
-                                <rect key="frame" x="-250" y="64" width="250" height="603"/>
+                                <rect key="frame" x="-220.5" y="64" width="220.5" height="603"/>
                                 <connections>
                                     <segue destination="aRA-8l-N3v" kind="embed" id="J5u-1g-e5O"/>
                                 </connections>
@@ -269,13 +269,14 @@
                             <constraint firstItem="2lm-7r-HF7" firstAttribute="leading" secondItem="9hz-ob-jrb" secondAttribute="trailing" id="ZmM-ml-dRR"/>
                             <constraint firstItem="2lm-7r-HF7" firstAttribute="leading" secondItem="Hk7-be-IqF" secondAttribute="leading" id="hs9-j3-kLs"/>
                             <constraint firstItem="2lm-7r-HF7" firstAttribute="trailing" secondItem="Hk7-be-IqF" secondAttribute="trailing" id="nF4-c3-3Rq"/>
-                            <constraint firstItem="9hz-ob-jrb" firstAttribute="width" secondItem="ZV1-vF-Xfb" secondAttribute="width" multiplier="1:1.5" id="y2D-wu-Hw9"/>
+                            <constraint firstItem="9hz-ob-jrb" firstAttribute="width" secondItem="ZV1-vF-Xfb" secondAttribute="width" multiplier="1:1.7" id="y2D-wu-Hw9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hk7-be-IqF"/>
                     </view>
                     <navigationItem key="navigationItem" id="x0T-Ao-cht"/>
                     <connections>
                         <outlet property="leadingMenuConstraint" destination="hs9-j3-kLs" id="P0p-QF-m0N"/>
+                        <outlet property="trailingMenuConstraint" destination="nF4-c3-3Rq" id="2zM-2n-kAT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iNV-ou-PCH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -323,18 +324,18 @@
             <objects>
                 <viewController id="aRA-8l-N3v" customClass="NavigationMenuViewController" customModule="Login_4K_Soft" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wBC-X2-Izm">
-                        <rect key="frame" x="0.0" y="0.0" width="250" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="220.5" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o8H-hx-H63">
-                                <rect key="frame" x="0.0" y="0.0" width="250" height="485"/>
+                                <rect key="frame" x="0.0" y="0.0" width="220.5" height="485"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reuseNavMenuIdentifier" id="bQN-8V-AnF" customClass="NavMenuTableViewCell" customModule="Login_4K_Soft" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="250" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="220.5" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bQN-8V-AnF" id="DhZ-9N-98R">
-                                            <rect key="frame" x="0.0" y="0.0" width="250" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="220.5" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aq4-v1-NJC">
@@ -375,10 +376,10 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FFs-zB-kXX">
-                                <rect key="frame" x="0.0" y="485" width="250" height="118"/>
+                                <rect key="frame" x="0.0" y="485" width="220.5" height="118"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="dtT-eZ-H6N">
-                                        <rect key="frame" x="75" y="10" width="100" height="100"/>
+                                        <rect key="frame" x="61" y="10" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="5Yx-9A-hUJ"/>
                                             <constraint firstAttribute="height" constant="100" id="OTH-fE-CTt"/>
