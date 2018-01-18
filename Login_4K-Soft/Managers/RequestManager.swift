@@ -11,7 +11,7 @@ import Alamofire
 import Unbox
 
 struct URLConstants {
-    static let signInURL = "http://api.crmsport.ru/users/sign_in"
+    static let signInURL = "https://api.crmsport.ru/users/sign_in"
 }
 enum RequestError : Error {
     case unknownError

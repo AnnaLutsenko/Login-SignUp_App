@@ -11,6 +11,7 @@ import UIKit
 class MenuViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var menuDelegate: ContainerViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,9 +20,15 @@ class MenuViewController: UIViewController {
     }
     
     func initViewController() {
+        navigationController?.navigationBar.barTintColor = .white
         tableView.separatorStyle = .none
+        tableView.allowsSelection = false
     }
 
+    
+    @IBAction func openMenu(_ sender: Any) {
+        self.menuDelegate.menuBtnTapped()
+    }
 }
 
 extension MenuViewController: UITableViewDelegate, UITableViewDataSource {

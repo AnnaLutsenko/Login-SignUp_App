@@ -27,6 +27,7 @@ struct Constant {
         static let blueBtn = "9DB5F0"
         static let blueLightBtn = "CED9FB"
         static let purple = "9DB5F0"
+        static let lightGray = "F8F8F8"
         static let grayActiveBorderTF = "A9A9A9"
         static let grayNotActiveTF = "F1F1F1"
         static let grayTextInfo = "888888"

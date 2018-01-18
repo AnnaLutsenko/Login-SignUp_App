@@ -38,7 +38,8 @@ class LoginViewController: UIViewController {
     
     func openMenuVC() {
         let vc = ContainerViewController.storyboardInstance()
-        self.navigationController?.viewControllers = [vc]
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = vc
     }
     
     //MARK: - Action

@@ -19,6 +19,13 @@ class ContainerViewController: UIViewController {
         initViewController()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "MainSegue" {
+            let vc = (segue.destination as! UINavigationController).viewControllers.first as! MenuViewController
+            vc.menuDelegate = self 
+        }
+    }
+    
     func initViewController() {
         self.navigationController?.navigationBar.isHidden = false
         self.navigationItem.title = "Команды"

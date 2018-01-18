@@ -9,7 +9,7 @@
 import UIKit
 
 class NavigationMenuViewController: UIViewController {
-    
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
     let navigationTitles = ["Константин", "Рабочие группы", "Календарь", "Сообщения", "Уведомления", "Настройки", "Поддержка"]
@@ -22,6 +22,7 @@ class NavigationMenuViewController: UIViewController {
     }
     
     func initViewController() {
+        searchBar.barTintColor = UIColor.init(hex: Constant.Color.lightGray)
         tableView.separatorStyle = .none
     }
 }
